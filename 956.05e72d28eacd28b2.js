@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkSsERPWeb=self.webpackChunkSsERPWeb||[]).push([[956],{2956:(_,s,a)=>{a.r(s),a.d(s,{DashboardModule:()=>r});var E=a(8987),l=a(742),u=a(6814),d=a(8926);let r=(()=>{var o;class n{}return(o=n).\u0275fac=function(M){return new(M||o)},o.\u0275mod=d.oAB({type:o}),o.\u0275inj=d.cJS({imports:[E.I,l.X,u.ez]}),n})()}}]);
