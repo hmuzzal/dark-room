@@ -1,0 +1,79 @@
+/* Apply column styles */
+.dash-group{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  overflow: hidden;   
+}
+
+.column-half {
+  width: 48.5%;
+  float: left;
+  // margin-top: 3rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-left: .73%;
+  margin-right: .73%;
+}
+
+.column {
+  width: 23.5%;
+  float: left;
+  // margin-top: 1.5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-left: .73%;
+  margin-right: .73%;
+}
+
+.upper-column {
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.upper-column .sub-column {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.sub-column {
+  flex: 1;
+  // border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.lower-column { 
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.icon-bg{
+  background-color:#ececec;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+  .column{
+    width: 100%;
+  }
+}

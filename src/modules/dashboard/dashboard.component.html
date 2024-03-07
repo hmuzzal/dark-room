@@ -1,0 +1,128 @@
+<!-- <div class="mt-2">
+    <h3 class="text-center">Dashboard</h3>
+
+</div> -->
+
+<!-- <div class="container"> -->
+
+<h3 class="text-center pt-4">Dashboard</h3>
+
+
+<div *ngIf="isUserAuthenticated()" style="color:rgb(6, 129, 151);">
+  <h2>
+    YOU ARE LOGGED IN
+  </h2>
+  <button type="button" class="btn btn-info" (click)="getData()">Load Data</button>
+  <ul>
+    <li *ngFor="let r of apiResponse">{{ r.summary }}</li>
+  </ul>
+</div>
+
+<div class="dash-group">
+  <div class="column">
+    <div class="upper-column">
+      <div class="sub-column">
+        <i class="fas fa-shopping-basket icon-bg"></i>
+      </div>
+      <div class="sub-column text-end">
+        <h5 class="fw-bold">Orders</h5>
+        <p class="mb-0"> Sep 1 - Sep 16 2023</p>
+      </div>
+    </div>
+    <div class="lower-column">
+      <apx-chart #apexchart [series]="series" [chart]="lineChart" [colors]="chartColors" [xaxis]="xaxis"
+        [yaxis]="yaxix"></apx-chart>
+    </div>
+  </div>
+  <div class="column">
+    <div class="upper-column">
+      <div class="sub-column">
+        <i class="fas fa-shopping-basket icon-bg"></i>
+      </div>
+      <div class="sub-column text-end">
+        <h5 class="fw-bold">Orders</h5>
+        <p class="mb-0"> Sep 1 - Sep 16 2023</p>
+      </div>
+    </div>
+    <div class="lower-column">
+      <apx-chart #apexchart [series]="series" [chart]="barChart" [colors]="chartColors" [xaxis]="xaxis" [yaxis]="yaxix"
+        [plotOptions]="plotOptions" [dataLabels]="dataLabels"></apx-chart>
+    </div>
+  </div>
+  <div class="column">
+    <div class="upper-column">
+      <div class="sub-column">
+        <i class="fas fa-shopping-basket icon-bg"></i>
+      </div>
+      <div class="sub-column text-end">
+        <h5 class="fw-bold">Orders</h5>
+        <p class="mb-0"> Sep 1 - Sep 16 2023</p>
+      </div>
+    </div>
+    <div class="lower-column">
+      <apx-chart #apexchart [series]="pieSeries" [chart]="pieChart" [colors]="pieColors" [labels]="pieLabels"
+        [dataLabels]="dataLabels" [fill]="fill"></apx-chart>
+    </div>
+  </div>
+  <div class="column">
+    <div class="upper-column">
+      <div class="sub-column">
+        <i class="fas fa-shopping-basket icon-bg"></i>
+      </div>
+      <div class="sub-column text-end">
+        <h5 class="fw-bold">Orders</h5>
+        <p class="mb-0"> Sep 1 - Sep 16 2023</p>
+      </div>
+    </div>
+    <div class="lower-column">
+      <apx-chart [series]="radialBarChart.series" [chart]="radialBarChart.chart"
+        [plotOptions]="radialBarChart.plotOptions" [labels]="radialBarChart.labels" [stroke]="radialBarChart.stroke"
+        [fill]="radialBarChart.fill"></apx-chart>
+    </div>
+  </div>
+</div>
+
+
+<div class="dash-group">
+  <div class="column-half">
+    <div class="upper-column">
+      <div class="sub-column">
+        <i class="fas fa-shopping-basket icon-bg"></i>
+      </div>
+      <div class="sub-column text-end">
+        <h5 class="fw-bold">Orders</h5>
+        <p class="mb-0"> Sep 1 - Sep 16 2023</p>
+      </div>
+    </div>
+    <div class="lower-column">
+      <apx-chart [series]="radial2Options.series" [chart]="radial2Options.chart"
+        [plotOptions]="radial2Options.plotOptions" [labels]="radial2Options.labels" [legend]="radial2Options.legend"
+        [colors]="radial2Options.colors" [responsive]="radial2Options.responsive"></apx-chart>
+    </div>
+  </div>
+  <div class="column-half">
+    <div class="upper-column">
+      <div class="sub-column">
+        <i class="fas fa-shopping-basket icon-bg"></i>
+      </div>
+      <div class="sub-column text-end">
+        <h5 class="fw-bold">Orders</h5>
+        <p class="mb-0"> Sep 1 - Sep 16 2023</p>
+      </div>
+    </div>
+    <div class="lower-column">
+      <apx-chart
+      [series]="series"
+      [chart]="timeSerieschart"
+      [dataLabels]="dataLabels"
+      [markers]="timeSeriesmarkers"
+      [fill]="fill"
+      [yaxis]="timeSeriesyaxis"
+      [xaxis]="timeSeriesXaxis"
+      [tooltip]="timeSeriesTooltip"
+      [autoUpdateSeries]="true"
+    ></apx-chart>
+    
+    </div>
+  </div>
+</div>

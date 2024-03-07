@@ -1,0 +1,64 @@
+.main-bg{
+  background: #F9F9F9;
+  padding-bottom: 3rem;
+}
+
+.nav-btn{
+  color: #8a8e95;
+}
+
+.nav-bg{
+  background: #FFFFFF;
+}
+
+
+.sb-sidenav-menu{
+  background: #FFFFFF;
+}
+
+.sb-sidenav-menu-heading{
+ color:  #9b9895 !IMPORTANT
+}
+
+.nav-link{
+  color:  #9b9895 !IMPORTANT
+}
+
+.sb-sidenav-collapse-arrow{
+  color:  #9b9895 !IMPORTANT
+}
+
+.sb-sidenav-footer{
+  background: #FFFFFF;
+}
+
+/* Hide default scrollbar */
+.sb-sidenav-menu {
+  overflow: auto;
+  scrollbar-width: thin; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, etc.) */
+.sb-sidenav-menu::-webkit-scrollbar { 
+  width: 5px;
+}
+
+/* Customize scrollbar track */
+.sb-sidenav-menu::-webkit-scrollbar-track {
+  background-color: #c9c6c6; /* Change to your desired color */
+}
+
+/* Customize scrollbar handle (thumb) */
+.sb-sidenav-menu::-webkit-scrollbar-thumb {
+  background-color: #fffefe; /* Change to your desired color */
+}
+
+.sb-topnav-toggled {
+  width: 100px !important;
+  margin: 0;
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  margin-left: -100px;
+}

@@ -1,0 +1,99 @@
+/* Basic styling to make the main container take up the entire width */
+.main-container {
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Background color for the whole container */
+}
+
+/* Rounded wrapper class */
+.rounded-wrapper {
+  border-radius: 25px; /* Adjust the value as needed for the desired roundness */
+  overflow: hidden; /* Clip the content inside the rounded border */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Split into two equal columns */
+  .left-side {
+    background-color: white; /* Replace with your preferred color or image */
+    padding: 60px;
+  }
+
+  /* Styling for the right side */
+  .right-side {
+    background-color: white; /* Replace with your preferred color or image */
+    padding: 30px;
+  }
+}
+
+.form-group .input-group-prepend .input-group-text {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 8px;
+}
+
+.input-group {
+  margin-top: 10px;
+   border-bottom: 1px solid;
+}
+
+.form-control.border-bottom {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ced4da;
+  box-shadow: none;
+  padding: 0rem 0.75rem 0.4rem 0.75rem;
+}
+
+.submit-btn{
+  margin-top: 30px;
+  background-color: #6EABE4;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.termsofservice {
+font-weight: 400;
+}
+
+.already-member{
+@extend .termsofservice;
+text-align: center;
+}
+
+.signup-img{
+margin-top:5rem
+}
+
+.text-hover:hover{
+      cursor: pointer;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+  .rounded-wrapper {
+    grid-template-columns: 1fr; /* Change to a single column layout on small screens */
+  }
+}
+
+   
+@media (max-width: 768px) {
+  .signup-img {
+    margin-top: 0rem !important;
+    }
+  
+  /* Other existing media query styles... */
+}
+
+@media (max-width: 768px) {
+  .right-side {
+   padding: 60px !important;
+    }
+  
+  /* Other existing media query styles... */
+}
