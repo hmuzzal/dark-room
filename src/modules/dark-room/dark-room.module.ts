@@ -7,10 +7,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { DarkLoginComponent } from './dark-login/dark-login.component';
+import { RoomlistComponent } from './roomlist/roomlist.component';
+import { AddroomComponent } from './addroom/addroom.component';
+import { ChatRoomComponent } from './chatroom/chatroom.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
-    DarkRoomComponent
+    DarkRoomComponent,
+    DarkLoginComponent,
+    RoomlistComponent,
+    AddroomComponent,
+    ChatRoomComponent
   ],
   imports: [
     CommonModule,
@@ -21,6 +33,9 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     MatCardModule,
     MatDividerModule,
     MatFormFieldModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    RouterModule
   ]
 })
 export class DarkRoomModule { }

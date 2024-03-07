@@ -5,7 +5,10 @@ import { RegistrationRoutingModule } from '../registration/registration-routing.
 import { TemplateComponent } from './template/template.component';
 import { LoginRoutingModule } from '../login/login-routing.module';
 import { AuthGuard } from 'src/services/authGuard/auth.guard';
-import { DarkRoomRoutingModule } from '../dark-room/dark-room-routing.module';
+import { DarkLoginComponent } from '../dark-room/dark-login/dark-login.component';
+import { RoomlistComponent } from '../dark-room/roomlist/roomlist.component';
+import { AddroomComponent } from '../dark-room/addroom/addroom.component';
+import { ChatRoomComponent } from '../dark-room/chatroom/chatroom.component';
 
 const routes: Routes = [
   {
@@ -20,14 +23,23 @@ const routes: Routes = [
             (m) => m.DashboardModule
           ),
       },
-      { path: 'darkroom', loadChildren: () => import('../dark-room/dark-room.module').then(m => m.DarkRoomModule) },
+      { path: '', loadChildren: () => import('../dark-room/dark-room.module').then(m => m.DarkRoomModule) },
     ],
   },
-  { path: '**', redirectTo: '' },
+  // { path: '**', redirectTo: '' },
+  { path: 'dark-login', component: DarkLoginComponent },
+  // { path: 'roomlist/:nickname', component: RoomlistComponent },
+  { path: 'roomlist', component: RoomlistComponent },
+  { path: 'addroom', component: AddroomComponent },
+  { path: 'chatroom/:nickname/:roomid', component: ChatRoomComponent },
+  { path: '',
+    redirectTo: '/dark-login',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), RegistrationRoutingModule, LoginRoutingModule, DarkRoomRoutingModule],
+  imports: [RouterModule.forRoot(routes), RegistrationRoutingModule, LoginRoutingModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

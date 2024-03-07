@@ -11,8 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginModule } from '../login/login.module';
 import { JwtModule } from '@auth0/angular-jwt';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DarkRoomRoutingModule } from '../dark-room/dark-room-routing.module';
 
 export function tokenGetter() {
   return localStorage.getItem("jwt");
@@ -28,6 +29,7 @@ export function tokenGetter() {
     AppRoutingModule,
     DashboardRoutingModule,
     RegistrationRoutingModule,
+    DarkRoomRoutingModule,
     RegistrationModule,
     LoginModule,
     HttpClientModule,
@@ -43,7 +45,7 @@ export function tokenGetter() {
     // BrowserAnimationsModule,
     // FormsModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
